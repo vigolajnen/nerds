@@ -1,0 +1,9 @@
+mixin picture(data={})
+  picture
+    .product__header
+      h3= data.title
+    ul
+      each item in data.items
+        li= item
+    .product__footer
+      button.btn Подписаться

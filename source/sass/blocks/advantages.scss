@@ -1,0 +1,51 @@
+.advantages {
+  background-image: url(../img/info/nerds-illustration1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 0;
+
+  padding-top: calc(208px + 37px);
+
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $primary-color;
+
+  &__list {
+    padding: 30px 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 120px;
+    font-weight: normal;
+    color: $text-color;
+    text-transform: lowercase;
+
+    & span:first-child {
+      position: relative;
+      align-self: flex-start;
+      font-weight: bold;
+      font-size: 45px;
+      line-height: 64px;
+      color: $primary-color;
+
+      &::before {
+        content: "%";
+        position: absolute;
+        top: 6px;
+        right: -20px;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 40px;
+      }
+    }
+  }
+}

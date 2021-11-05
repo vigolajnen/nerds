@@ -1,0 +1,13 @@
+
+mixin review(data)
+ .review
+  .review__user
+    img.review__pic(src=data.src, alt="user")
+    .review__info
+      h4=data.name
+      p=data.date
+  .review__text
+    block
+
+
+    

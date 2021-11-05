@@ -1,0 +1,18 @@
+include ../../mixins/svg_icon.pug
+
+.popup
+  .popup__wrapper
+    button.popup__close(type="button" aria-label="Закрыть модальное окно")
+      +svg_icon(("../img/sprite_auto.svg"), "icon-close").icon
+
+    form.feedback-form(action="https://echo.htmlacademy.ru" method="get")
+      fieldset.feedback-form__wrapper
+        legend Напишите нам
+        label(for="form-name") Ваше имя:
+          input(type="form-name" placeholder="Имя Фамилия")
+        label(for="form-email") Ваш email:
+          input(type="form-email" placeholder="email@example.com")
+      label(for="form-mess") Текст письма:
+        textarea(name="form-mess", cols="30", rows="10" placeholder="В свободной форме")
+
+      button.btn(type="submit") Отправить

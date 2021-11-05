@@ -1,0 +1,24 @@
+
+mixin product(data={})
+  .product
+    .product__sale=data.sale
+    img.product__pic(src=data.src, alt=data.alt)
+
+    .product__info
+      h3.product__title= data.title
+
+      ul.product__list
+        each item in data.items
+          li.product__item 
+            a(href="#")= item
+
+      ul.product__list-color
+        each color in data.colors
+          li.product__item-color 
+            button.btn.product__btn-color(class=color)
+
+      .product__price
+        span.product__price--old=data.oldPrice 
+        span=data.newPrice 
+
+      button.btn.product__btn#popup-product-btn Заказать

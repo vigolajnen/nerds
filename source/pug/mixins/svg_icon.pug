@@ -1,0 +1,14 @@
+//- mixin svg_icon(svg_url)
+//-     svg&attributes(attributes)
+//-         use(xlink:href=svg_url)
+
+mixin svg_icon(svg_url, svg_id)
+  if svg_id
+    svg()&attributes(attributes)
+      use(xlink:href= svg_url + '#' + svg_id)
+  else
+    svg()&attributes(attributes)
+      use(xlink:href= svg_url)
+
+//- a.action(href="#!")
+//-   +svg_icon("","location")(class="icon-md icon-stroke")

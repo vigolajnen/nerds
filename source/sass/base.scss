@@ -1,0 +1,63 @@
+html {
+  height: 100%;
+}
+
+.overlay {
+  overflow: hidden;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: $mainFont;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  // @media (max-width: 1447px) {
+  //   @include adaptiv-font(265, 67);
+  // }
+}
+
+h2,
+h3 {
+  font-family: $mainFont;
+  font-size: 30px;
+
+  @media (max-width: 1447px) {
+    @include adaptiv-font(30, 18);
+  }
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}

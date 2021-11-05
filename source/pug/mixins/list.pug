@@ -1,0 +1,6 @@
+//- Declaration
+mixin list(id, ...items)
+  ul(class=id)
+    each item in items
+      li
+        a(href="url")= item

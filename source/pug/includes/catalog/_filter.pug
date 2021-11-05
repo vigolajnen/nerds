@@ -1,0 +1,42 @@
+section.filter.catalog__filter
+  h2.visually-hidden Фильтр товаров
+  form.filter-form(action="https://echo.htmlacademy.ru" method="get")
+    fieldset
+      legend Стоимость:
+
+      label(for="")
+        input(type="range" name="")
+
+    fieldset
+      legend Сетка:
+      ul
+        li
+          input(id="grid-1" type="radio" name="grid" checked)
+          label(for="grid-1") Адаптивная
+        li
+          input(id="grid-2" type="radio" name="grid")
+          label(for="grid-2") Фиксированная
+        li
+          input(id="grid-3" type="radio" name="grid")
+          label(for="grid-3") Резиновая
+
+    fieldset
+      legend Особенности:
+      ul
+        li
+          input(id="filter-slider" type="checkbox" name="filter-slider" checked)
+          label(for="filter-slider") Слайдер
+        li
+          input(id="filter-advantages" type="checkbox" name="filter-advantages")
+          label(for="filter-advantages") Блок преимуществ
+        li
+          input(id="filter-news" type="checkbox" name="filter-news" checked)
+          label(for="filter-news") Новости
+        li
+          input(id="filter-gallery" type="checkbox" name="filter-gallery")
+          label(for="filter-gallery") Галерея
+        li
+          input(id="filter-cart" type="checkbox" name="filter-cart")
+          label(for="filter-cart") Корзина
+
+    button.btn(type="submit") Показать

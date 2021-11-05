@@ -1,0 +1,25 @@
+include ../mixins/categorie.pug
+
+section.categories
+  .container
+    +categorie({
+      src: "../img/categories/illustration-11.jpg",
+      srcset: "../img/categories/illustration-11@2x.jpg 2x",
+      title: "Веб-сайты",
+      text: "Мир никогда не будет прежним после того как увидит ваш сайт!"
+    })
+    +categorie({
+      iconClass: "btn--green",
+      src: "../img/categories/illustration-21.jpg",
+      srcset: "../img/categories/illustration-21@2x.jpg 2x",
+      title: "Приложения",
+      text: "Покорите топ-10 приложений в AppStore и Google Play"
+    })
+    +categorie({
+      iconClass: "btn--yellow",
+      src: "../img/categories/illustration-31.jpg",
+      srcset: "../img/categories/illustration-31@2x.jpg 2x",
+      title: "Презентации",
+      text: "Вы даже не подозреваете, насколько вы изумительны!"
+    })
+

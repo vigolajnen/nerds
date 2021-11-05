@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+
+  &:focus, &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: $opacity-base;
+  }
+
+  & img {
+    width: 160px;
+    height: 65px;
+  }
+}

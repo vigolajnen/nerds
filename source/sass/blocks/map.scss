@@ -1,0 +1,14 @@
+.map {
+  min-height: 415px;
+  background-image: url(../img/map/map1.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  &__info {
+    padding: 54px 0;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+

@@ -1,0 +1,15 @@
+//- catalog.pug
+doctype html
+html
+  include includes/head.pug
+  body.page
+    include includes/header/_header-cat.pug
+
+    main.catalog.container
+      include includes/catalog/_filter.pug
+      include includes/catalog/_list.pug
+
+    include includes/footer/_footer.pug
+    include includes/popup/_popup.pug
+
+    include includes/scripts.pug

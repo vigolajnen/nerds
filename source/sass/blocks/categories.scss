@@ -1,0 +1,42 @@
+.categories {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  & .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 6vw;
+    transition: $transition-base;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    max-width: 300px;
+    width: 100%;
+    color: $text-color;
+  }
+
+  &__pic {
+    padding-bottom: 25px;
+  }
+
+  &__title {
+    font-family: $mainFontBold;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 16px;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    padding-bottom: 32px;
+  }
+
+  &__btn {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+}

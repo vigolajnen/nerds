@@ -1,0 +1,20 @@
+//- header
+include ../../mixins/svg_icon.pug
+
+header.page-header
+  .container
+    a.logo(href="index.html")
+      img.logo__pic(
+        src="../img/logo.svg"
+        width="160"
+        height="65"
+        alt="Логотип компании")
+    nav.page-header__nav.nav
+      a.nav__link(href="#") Студия
+      a.nav__link(href="#") Клиенты
+      a.nav__link.nav__link--active(href="catalog.html") Магазин
+      a.nav__link(href="#") Контакты
+    a.page-header__cart.cart(href="#")
+      +svg_icon(("../img/sprite_auto.svg"), "icon-cart").icon
+      span Корзина
+  h1 Магазин готовых шаблонов

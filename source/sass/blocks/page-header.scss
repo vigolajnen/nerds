@@ -1,0 +1,57 @@
+.page-header {
+  width: 100%;
+  padding-top: 48px;
+  background-color: $bg-color;
+
+  & h1 {
+    padding-top: 72px;
+    padding-bottom: 108px;
+    text-align: center;
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: $primary-color;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:active {
+      opacity: $opacity-base;
+    }
+
+    & svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    & span {
+      padding-left: 25px;
+    }
+  }
+}
