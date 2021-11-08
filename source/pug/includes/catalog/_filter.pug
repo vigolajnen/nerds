@@ -1,42 +1,51 @@
-section.filter.catalog__filter
+section.filter.page-catalog__filter
   h2.visually-hidden Фильтр товаров
-  form.filter-form(action="https://echo.htmlacademy.ru" method="get")
-    fieldset
-      legend Стоимость:
+  form.filters(action="https://echo.htmlacademy.ru" method="get")
+    fieldset.filters__wrapper.filters__wrapper--price
+      legend.filters__title Стоимость:
 
-      label(for="")
-        input(type="range" name="")
+      .filters__range.range-filter
+        .range-controls
+          .scale
+            .bar
+          .toggle.toggle-min(tabindex="0")
+          .toggle.toggle-max(tabindex="0")
+        .price-controls
+          label.min-price(for="min-price") от
+            input(id="min-price", type="number", name="min-price", value="0")
+          label.min-price(for="max-price") до
+            input(id="max-price", type="number", name="max-price", value="15000")
 
-    fieldset
-      legend Сетка:
-      ul
+    fieldset.filters__wrapper.filters__wrapper--grid
+      legend.filters__title Сетка:
+      ul.filters__list
         li
-          input(id="grid-1" type="radio" name="grid" checked)
+          input.visually-hidden(id="grid-1" type="radio" name="grid" checked)
           label(for="grid-1") Адаптивная
         li
-          input(id="grid-2" type="radio" name="grid")
+          input.visually-hidden(id="grid-2" type="radio" name="grid")
           label(for="grid-2") Фиксированная
         li
-          input(id="grid-3" type="radio" name="grid")
+          input.visually-hidden(id="grid-3" type="radio" name="grid")
           label(for="grid-3") Резиновая
 
-    fieldset
-      legend Особенности:
-      ul
+    fieldset.filters__wrapper
+      legend.filters__title Особенности:
+      ul.filters__list
         li
-          input(id="filter-slider" type="checkbox" name="filter-slider" checked)
+          input.visually-hidden(id="filter-slider" type="checkbox" name="filter-slider" checked)
           label(for="filter-slider") Слайдер
         li
-          input(id="filter-advantages" type="checkbox" name="filter-advantages")
+          input.visually-hidden(id="filter-advantages" type="checkbox" name="filter-advantages")
           label(for="filter-advantages") Блок преимуществ
         li
-          input(id="filter-news" type="checkbox" name="filter-news" checked)
+          input.visually-hidden(id="filter-news" type="checkbox" name="filter-news" checked)
           label(for="filter-news") Новости
         li
-          input(id="filter-gallery" type="checkbox" name="filter-gallery")
+          input.visually-hidden(id="filter-gallery" type="checkbox" name="filter-gallery")
           label(for="filter-gallery") Галерея
         li
-          input(id="filter-cart" type="checkbox" name="filter-cart")
+          input.visually-hidden(id="filter-cart" type="checkbox" name="filter-cart")
           label(for="filter-cart") Корзина
 
-    button.btn(type="submit") Показать
+    button.filters__btn(type="submit") Показать

@@ -1,0 +1,76 @@
+.range-filter {
+  width: 100%;
+  max-width: 260px;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: $range-color;
+  border-radius: 5px;
+  box-sizing: content-box;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcdf;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid $default-color;
+  background-color: $range-color;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.price-controls label {
+  display: flex;
+  align-items: center;
+  max-width: 45%;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 100%;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-family: inherit;
+  font-size: inherit;
+}

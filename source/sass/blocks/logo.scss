@@ -1,7 +1,8 @@
 .logo {
   display: flex;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     opacity: 0.7;
   }
 

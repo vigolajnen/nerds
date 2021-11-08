@@ -1,8 +1,6 @@
 .social {
   &__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    @include ListReset();
 
     display: flex;
     flex-wrap: wrap;
@@ -15,12 +13,6 @@
     &:not(:last-child) {
       margin-right: 9px;
     }
-
-    &:first-child {
-      & .social__link {
-        padding-left: 26px;
-      }
-    }
   }
 
   &__link {
@@ -28,19 +20,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    width: 81px;
+    height: 81px;
     background: linear-gradient(0deg, #e1e1e1, #e1e1e1), #ffffff;
     border-radius: 50%;
 
-    &:focus,
-    &:hover {
-      & .icon {
-        opacity: 0.3;
-      }
+    &--vk {
+      padding-left: 26px;
     }
 
-    & .icon {
+    &:focus,
+    &:hover {
+      background: linear-gradient(0deg, #e74246, #e74246), #ffffff;
+    }
+
+    &:active {
+      background: linear-gradient(0deg, #d7373b, #d7373b), #ffffff;
+      box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    }
+
+    &:active .social__icon {
+      opacity: 0.3;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 15px;
+
+    &--fb {
+      width: 12px;
       height: 22px;
+    }
+
+    &--in {
+      width: 21px;
+      height: 21px;
     }
   }
 }

@@ -6,10 +6,11 @@ $mainFontBold: "Roboto Bold", "Arial", sans-serif;
 $mainFontLight: "Roboto Light", "Arial", sans-serif;
 
 // Size
-$mainFontSize: 1em;
-$mainLineHeight: normal;
+$mainFontSize: 16px;
+$mainLineHeight: 18px;
 $mainFontWeight: normal;
-$mainFontWeightBold: bold;
+$mainFontWeightBold: 700;
+$mainFontWeightMedium: 500;
 
 // Main color
 $default-color: #ffffff;
@@ -18,8 +19,25 @@ $accent-color: #fb565a;
 $green-color: #00ca74;
 $yellow-color: #efc849;
 $text-color: #283136;
-
 $bg-color: #eeeeee;
+
+$btn-radius: 3px;
+$btn-color: $bg-color;
+$btn-hover: #dfdfdf;
+$btn-active: #d5d5d5;
+$btn-border: #dbdbdb;
+
+$product-header-color: #4d4d4d;
+$product-body-border: #eaeaea;
+$product-text-color: #666666;
+$product-title-color: $accent-color;
+
+$pagination-color: $bg-color;
+$pagination-border: $btn-border;
+$pagination-radius: $btn-radius;
+
+$range-color: $bg-color;
+
 
 $transition-base: 0.5s;
 $opacity-base: 0.3;

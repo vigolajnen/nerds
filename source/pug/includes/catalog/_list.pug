@@ -1,22 +1,62 @@
-.catalog__wrapper
+include ../../mixins/product.pug
+
+.page-catalog__wrapper
   include _sort.pug
-  section.catalog__list
-    .catalog__item
-      a.product(href="#")
-        .product__header
-          svg(viewBox="0 0 100 4"  xmlns="http://www.w3.org/2000/svg")
-            circle(cx="2" cy="2" r="2")
-            circle(cx="7" cy="2" r="2")
-            circle(cx="12" cy="2" r="2")
-        .product__pic
-          img(src="../img/catalog/img-sedona 1.jpg", alt="sedona")
-        .product__body
-          h3.product__title
-          p
-          .product__price
 
+  section.catalog
     .catalog__item
+      +product({
+        url: "#",
+        src: "../img/catalog/img-sedona.jpg",
+        srcset: "../img/catalog/img-sedona@2x.jpg 2x",
+        title: "Sedona",
+        text: "Информационный сайт для туристов",
+        price: "9 900 ₽"
+      })
     .catalog__item
+      +product({
+        url: "#",
+        src: "../img/catalog/img-pink.jpg",
+        srcset: "../img/catalog/img-pink@2x.jpg 2x",
+        title: "Pink App",
+        text: "Продуктовый лендинг приложения для iOS и Android",
+        price: "9 900 ₽"
+      })
     .catalog__item
+      +product({
+        url: "#",
+        src: "../img/catalog/img-barbershop.jpg",
+        srcset: "../img/catalog/img-barbershop@2x.jpg 2x",
+        title: "barbershop",
+        text: "Информационный сайт для туристов",
+        price: "9 900 ₽"
+      })
+    .catalog__item
+      +product({
+        url: "#",
+        src: "../img/catalog/img-kvast.jpg",
+        srcset: "../img/catalog/img-kvast@2x.jpg 2x",
+        title: "kvast",
+        text: "Продуктовый лендинг приложения для iOS и Android",
+        price: "9 900 ₽"
+      })
+    .catalog__item
+      +product({
+        url: "#",
+        src: "../img/catalog/img-mishka.jpg",
+        srcset: "../img/catalog/img-mishka@2x.jpg 2x",
+        title: "mishka",
+        text: "Информационный сайт для туристов",
+        price: "9 900 ₽"
+      })
+    .catalog__item
+      +product({
+        url: "#",
+        src: "../img/catalog/img-aplus.jpg",
+        srcset: "../img/catalog/img-aplus@2x.jpg 2x",
+        title: "aplus",
+        text: "Продуктовый лендинг приложения для iOS и Android",
+        price: "9 900 ₽"
+      })
 
-
+  include _pagination.pug

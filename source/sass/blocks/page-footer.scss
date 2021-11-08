@@ -1,13 +1,14 @@
 .page-footer {
-  & .container {
+  & > .container {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    padding-top: 68px;
+    padding-top: 66px;
     padding-bottom: 68px;
   }
 
   &__text {
+    padding-top: 6px;
     padding-left: 140px;
     font-style: normal;
     font-weight: normal;

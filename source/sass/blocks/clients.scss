@@ -34,6 +34,18 @@
   }
 
   &__item {
+    opacity: 0.2;
+    transition: $transition-base;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+
     & img {
       width: 100%;
       height: auto;

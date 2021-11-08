@@ -1,11 +1,15 @@
-form.sort.catalog__sort(action="https://echo.htmlacademy.ru" method="get")
-  fieldset
-    legend Сортировать:
+include ../../mixins/svg_icon.pug
 
-    button.sort__btn.sort__btn--active(type="button") По цене
-    button.sort__btn(type="button") По типу
-    button.sort__btn(type="button") По названию
+form.sort.catalog__sort(action="https://echo.htmlacademy.ru" method="get")
+  .sort__wrapper
+    .sort__title Сортировать:
+
+    button.sort__item.sort__item--active(type="button") По цене
+    button.sort__item(type="button") По типу
+    button.sort__item(type="button") По названию
 
     .sort__arrows
       button.sort__arrow-btn.sort__arrow-btn--active(type="button" aria-label="Сортировать по убыванию")
-      button.sort__arrow-btn(type="button" aria-label="Сортировать по возврастанию")
+        +svg_icon(("img/sprite_auto.svg"), "icon-arrow").icon
+      button.sort__arrow-btn.sort__arrow-btn--revers(type="button" aria-label="Сортировать по возврастанию")
+        +svg_icon(("img/sprite_auto.svg"), "icon-arrow").icon

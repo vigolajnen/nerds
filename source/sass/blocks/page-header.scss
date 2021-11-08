@@ -6,6 +6,9 @@
   & h1 {
     padding-top: 72px;
     padding-bottom: 108px;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
     text-align: center;
   }
 
@@ -21,37 +24,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 17px;
+    margin-right: 47px;
   }
 
   &__cart {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 30px;
-    color: $primary-color;
-    text-transform: uppercase;
-
-    &:focus,
-    &:hover {
-      color: $accent-color;
-    }
-
-    &:active {
-      opacity: $opacity-base;
-    }
-
-    & svg {
-      width: 15px;
-      height: 15px;
-    }
-
-    & span {
-      padding-left: 25px;
-    }
+    padding-top: 17px;
   }
 }

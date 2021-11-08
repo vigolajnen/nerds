@@ -1,24 +1,14 @@
 
 mixin product(data={})
   .product
-    .product__sale=data.sale
-    img.product__pic(src=data.src, alt=data.alt)
-
-    .product__info
-      h3.product__title= data.title
-
-      ul.product__list
-        each item in data.items
-          li.product__item 
-            a(href="#")= item
-
-      ul.product__list-color
-        each color in data.colors
-          li.product__item-color 
-            button.btn.product__btn-color(class=color)
-
-      .product__price
-        span.product__price--old=data.oldPrice 
-        span=data.newPrice 
-
-      button.btn.product__btn#popup-product-btn Заказать
+    .product__header
+      svg(viewBox="0 0 100 4"  xmlns="http://www.w3.org/2000/svg")
+        circle(cx="2" cy="2" r="2")
+        circle(cx="7" cy="2" r="2")
+        circle(cx="12" cy="2" r="2")
+    .product__body
+      img.product__pic(src=data.src, srcset=data.srcset, alt="Фото макета "+data.title)
+      .product__footer
+        a.product__title(href=data.url)=data.title
+        p.product__text=data.text
+        .product__price.btn=data.price

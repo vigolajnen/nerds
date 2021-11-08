@@ -1,7 +1,7 @@
 .about-company {
   position: relative;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 46px;
 
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
 
     & h3 {
       padding-top: 40px;
-      padding-bottom: 23px;
+      padding-bottom: 26px;
       font-weight: bold;
       font-size: 16px;
       line-height: 24px;
@@ -31,10 +31,18 @@
   }
 
   &__text-big {
-    padding-bottom: 32px;
+    padding-top: 33px;
+    padding-bottom: 34px;
     font-weight: 500;
     font-size: 45px;
     line-height: 45px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &__list {
@@ -42,22 +50,22 @@
     margin: 0;
     list-style: none;
     color: $text-color;
+  }
 
-    & li {
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 30px;
+  &__item {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 30px;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 25px;
-        height: 2px;
-        background-color: $accent-color;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 2px;
+      background-color: $accent-color;
     }
   }
 }

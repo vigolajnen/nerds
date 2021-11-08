@@ -1,9 +1,25 @@
 .product {
   width: 100%;
-  // filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25));
+
+  &:hover {
+    & .product__footer {
+      opacity: 1;
+      pointer-events: painted;
+    }
+
+    & .product__header {
+      opacity: 1;
+    }
+
+    & .product__body {
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+  }
+
   &__header {
     padding: 10px;
-    background-color: #4d4d4d;
+    background-color: $product-header-color;
+    opacity: 0.12;
 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -11,5 +27,59 @@
     & svg {
       fill: $default-color;
     }
+  }
+
+  &__body {
+    position: relative;
+    border: 1px solid $product-body-border;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__pic {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__footer {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 26px 52px 44px;
+    background-color: $bg-color;
+    text-align: center;
+    transition: $transition-base;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    color: $primary-color;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: $product-title-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 18px;
+    color: $product-text-color;
   }
 }

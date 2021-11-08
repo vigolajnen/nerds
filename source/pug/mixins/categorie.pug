@@ -1,8 +1,8 @@
 
 mixin categorie(data={})
   .categories__item
-    img.categories__pic(src=data.src, srcset=data.srcset, alt=data.title)
+    img.categories__pic(src=data.src, srcset=data.srcset, alt=data.title, width="300" height="146")
     h2.categories__title=data.title
     p.categories__text=data.text
-    a.btn.categories__btn(class=data.iconClass) Заказать
+    a.btn.categories__btn(class=data.iconClass href="#") Заказать
 

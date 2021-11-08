@@ -1,9 +1,7 @@
 .btn {
+  @include BtnReset();
+
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  padding: 1vw 3.75vw;
   font-family: $mainFontMedium;
   font-style: normal;
   font-weight: 500;

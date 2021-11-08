@@ -1,0 +1,10 @@
+.page-catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-content: start;
+
+  gap: 140px;
+
+  padding-top: 37px;
+  padding-bottom: 60px;
+}

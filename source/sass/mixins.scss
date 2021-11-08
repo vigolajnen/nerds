@@ -1,3 +1,5 @@
+/*stylelint-disable*/
+
 // $vw-viewport: 1440;
 // @function get-vw($font){
 //   $vw-context: $vw-viewport * 0.01 * 1px;
@@ -12,4 +14,23 @@ $maxWidth: 1447;
   font-size: calc(
     #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
   );
+}
+
+@mixin BtnReset {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  transition: $transition-base;
+}
+
+@mixin ListReset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
