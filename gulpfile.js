@@ -130,7 +130,11 @@ gulp.task('copy', function () {
 
 gulp.task('js', function() {
   return gulp
-    .src(["source/js/function.js", "source/js/swiper.js"])
+    .src([
+      "source/js/map.js",
+      "source/js/function.js",
+      "source/js/swiper.js",
+    ])
     .pipe(concat("script.js"))
     .pipe(gulp.dest("build/js"));
 });
@@ -146,7 +150,10 @@ gulp.task('libs', function () {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./js/svg4everybody.js', './node_modules/swiper/swiper-bundle.js'])
+  return gulp.src([
+    './js/svg4everybody.js',
+    './node_modules/swiper/swiper-bundle.js'
+  ])
     .pipe(concat('vendor.min.js'))
     .pipe(gulp.dest('build/js'));
 });

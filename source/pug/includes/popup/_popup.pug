@@ -5,14 +5,14 @@ include ../../mixins/svg_icon.pug
     button.popup__close(type="button" aria-label="Закрыть модальное окно")
       +svg_icon(("../img/sprite_auto.svg"), "icon-close").icon
 
-    form.feedback-form(action="https://echo.htmlacademy.ru" method="get")
+    form.feedback-form(action="https://echo.htmlacademy.ru" method="get" target="_blank")
       fieldset.feedback-form__wrapper
         legend Напишите нам
         label(for="form-name") Ваше имя:
-          input(type="form-name" placeholder="Имя Фамилия")
+          input(id="form-name" type="text" name="form-name" placeholder="Имя Фамилия" required)
         label(for="form-email") Ваш email:
-          input(type="form-email" placeholder="email@example.com")
+          input(id="form-email" type="text" name="form-email" placeholder="email@example.com" required)
       label(for="form-mess") Текст письма:
-        textarea(name="form-mess", cols="30", rows="10" placeholder="В свободной форме")
+        textarea(id="form-mess" name="form-mess", cols="30", rows="10" placeholder="В свободной форме" required)
 
       button.feedback-form__btn(type="submit") Отправить

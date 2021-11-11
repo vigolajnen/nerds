@@ -17,6 +17,18 @@
     display: flex;
   }
 
+  &--active-animation {
+    animation-name: openPopup;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+
+  &--close-animation {
+    animation-name: closePopup;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+
   &__wrapper {
     position: relative;
     padding: 63px 100px 84px;
@@ -38,5 +50,40 @@
     border: none;
     border-radius: 0;
     cursor: pointer;
+    opacity: 0.3;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+}
+
+
+@keyframes openPopup {
+  0% {
+    opacity: 0;
+    top: 200%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes closePopup {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+
+  100% {
+    opacity: 0;
+    top: 200%;
   }
 }
