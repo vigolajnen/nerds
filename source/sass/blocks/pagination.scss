@@ -48,8 +48,13 @@
     font-family: $mainFontMedium;
     font-weight: $mainFontWeightMedium;
     text-transform: uppercase;
+    color: $primary-color;
     border-radius: $pagination-radius;
     background-color: $pagination-color;
+
+    @media (max-width: $table) {
+      padding: 12px;
+    }
 
     &:focus,
     &:hover {

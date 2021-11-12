@@ -37,6 +37,10 @@
     width: 100%;
     background: #ffffff;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    @media (max-width: $table) {
+      padding: 20px 15px;
+    }
   }
 
   &__close {
@@ -52,6 +56,11 @@
     cursor: pointer;
     opacity: 0.3;
 
+    @media (max-width: $table) {
+      top: 20px;
+      right: 10px;
+    }
+
     &:focus,
     &:hover {
       opacity: 1;
@@ -62,7 +71,6 @@
     }
   }
 }
-
 
 @keyframes openPopup {
   0% {

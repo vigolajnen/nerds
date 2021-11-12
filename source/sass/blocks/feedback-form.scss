@@ -1,4 +1,43 @@
 .feedback-form {
+  &--error {
+    & input {
+      color: #e74246;
+      border: 2px solid #e74246;
+    }
+  }
+
+  &__wrapper {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & label {
+      width: calc(50% - 20px);
+
+      @media (max-width: $table) {
+        width: 100%;
+      }
+    }
+  }
+
+  & legend {
+    padding-bottom: 37px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+
+    @media (max-width: $table) {
+      font-size: calc(45px / 1.5);
+      line-height: calc(53px / 1.5);
+    }
+  }
+
   & label {
     display: flex;
     flex-direction: column;
@@ -38,43 +77,12 @@
     max-height: 118px;
   }
 
-  &--error {
-    & input {
-      color: #e74246;
-      border: 2px solid #e74246;
-    }
-  }
-
-  &__wrapper {
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    margin: 0;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    & label {
-      width: calc(50% - 20px);
-    }
-  }
-
-  & legend {
-    padding-bottom: 37px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 45px;
-    line-height: 53px;
-  }
-
   &__btn {
     @include BtnReset();
     margin-top: 15px;
     padding: 15px 84px;
 
     position: relative;
-    // font-family: $mainFontMedium;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

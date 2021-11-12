@@ -7,4 +7,8 @@
 
   padding-top: 37px;
   padding-bottom: 60px;
+
+  @media (max-width: $table) {
+    grid-template-columns: 1fr;
+  }
 }
